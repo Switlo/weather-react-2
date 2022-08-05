@@ -16,6 +16,7 @@ export default function App() {
   
 
 function handleResponse(response) {
+  console.log(response.data);
       setWeatherData({
       city: response.data.name,
       country: response.data.sys.country,
@@ -24,6 +25,7 @@ function handleResponse(response) {
       humidity: response.data.main.humidity,
       wind: Math.round(response.data.wind.speed),
       icon: response.data.weather[0].icon
+
       // `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
            
     })

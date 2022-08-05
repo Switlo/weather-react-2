@@ -1,5 +1,6 @@
 import React from "react";
 import IconsWeather from "./IconsWeather";
+import TemperatureUnits from "./TemperatureUnits";
 import "./Header.css";   
       
 
@@ -29,22 +30,10 @@ export default function CentralCity (props) {
           <div className="col" >
             <div id="icon">
             <IconsWeather code={props.data.icon} alt={props.data.description} />
-           {/* <img src={props.data.icon} alt={props.data.description} id="icon"/> */}
-           </div>
+                     </div>
             <div className="temperature-units">
-              <span className="temperature" id="temperature">
-                {props.data.temp}
-              </span>
-              <span className="units">
-                <a href="#top" id="celsius-link" className="active">
-                  °C
-                </a>
-                |
-                <a href="#top" id="fahrenheit-link">
-                  °F
-                </a>
-              </span>
-            </div>
+              <TemperatureUnits celsius={props.data.temp}/>
+             </div>
           </div>
         </div>
       </div>
