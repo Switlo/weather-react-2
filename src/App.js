@@ -11,7 +11,7 @@ import "./App.css";
 
 export default function App() {
   const [weatherData, setWeatherData] = useState("");
-  const [city, setCity] = useState();
+  const [city, setCity] = useState("Kyiv");
 
   
 
