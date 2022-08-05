@@ -1,0 +1,15 @@
+#container {
+  font-family: "Poppins", sans-serif;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 10px;
+  border-width: 1;
+  background: linear-gradient(#e1f2fb, #f7f7f7);
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.HeaderForm form {
+  min-width: 210px;
+}
+

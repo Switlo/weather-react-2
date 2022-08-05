@@ -1,0 +1,45 @@
+#weather-nextdays{
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+.nextdays{
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(#e1f2fb, #f7f7f7);
+    border-radius: 10px;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    font-weight: 600;
+    color: #636262;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 5px;
+  }
+  
+  .nextdays i {
+    color: #074d8f;
+  }
+  .week-day {
+    font-size: 15px;
+    font-weight: 600;
+    color: #636262;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    right: -35px;
+  }
+  .temperature-min,
+  .temperature-max {
+    font-size: 18px;
+    font-weight: 600;
+    color: #636262;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  
+  .temperature-max {
+    color: #074d8f;
+  }
+  
