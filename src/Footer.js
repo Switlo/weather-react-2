@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <div className="footer">
       <p>
-      © This project was coded by&nbsp;
+      © Coded by&nbsp;
         <a
           href="https://www.linkedin.com/in/svitlana-rudyeva-19156a181/"
           target="_blank" rel="noopener noreferrer"
@@ -18,6 +18,7 @@ export default function Footer() {
         <a href="https://github.com/Switlo/weather-react" target="_blank" rel="noopener noreferrer">
           GitHub
         </a>
+        &nbsp;and hosted on <a href="https://glittery-tiramisu-286e0f.netlify.app/" target="_blank" rel="noopener noreferrer">Netlify</a>
       </p>
     </div>
   );
