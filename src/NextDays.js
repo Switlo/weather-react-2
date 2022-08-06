@@ -17,11 +17,11 @@ export default function NextDays(props) {
     return (
       <div className="card" id="weather-nextdays">
        <div className="row"> 
-            {forecast.map(function (daylyWeather, index) {
+            {forecast.map(function (dailyWeather, index) {
             if (index < 4) {
               return (
                 <div className="col" key={index}>
-                    <WeatherNextDays data={daylyWeather} />
+                    <WeatherNextDays data={dailyWeather} />
                 </div>
               ); }
              })
