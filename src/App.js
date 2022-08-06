@@ -13,10 +13,7 @@ export default function App() {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState("Kyiv");
 
-  
-
 function handleResponse(response) {
-  console.log(response.data);
       setWeatherData({
       ready: true,
       city: response.data.name,
@@ -25,30 +22,24 @@ function handleResponse(response) {
       description: response.data.weather[0].main,
       humidity: response.data.main.humidity,
       wind: Math.round(response.data.wind.speed),
-      icon: response.data.weather[0].icon
-
-      // `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-           
+      icon: response.data.weather[0].icon          
     })
   }
 
 function handleSubmit(event) {
     event.preventDefault();
-    search();    
+    search();
   }  
  
 
   function updateCity(event) {
-    setCity(event.target.value);   
-  
+    setCity(event.target.value);     
   }
     
 
   function search(){
       const apiKey = "edb5073dfa06a01ce33233d517b9358c";
-      let unit = "metric";
-      let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
-      
+      let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
       axios.get(apiUrl).then(handleResponse);
     } 
     
@@ -95,8 +86,7 @@ function handleSubmit(event) {
       <div>
           <Footer />
       </div>
-    </div>
-    
+    </div>    
   );  
 } else {
     search();
