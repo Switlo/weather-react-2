@@ -21,7 +21,7 @@ export default function NextDays(props) {
             {forecast.map(function (dailyWeather, index) {
             if (index < 4) {
               return (
-                <div className="col-3" key={index}>
+                <div className="col" key={index}>
                     <WeatherNextDays data={dailyWeather} />
                 </div>
               ); }
