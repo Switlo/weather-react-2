@@ -29,7 +29,7 @@ export default function CentralCity (props) {
           </div>
           <div className="col" >
             <div id="icon">
-            <IconsWeather code={props.data.icon} alt={props.data.description} />
+            <IconsWeather code={props.data.icon} alt={props.data.description} size={55}/>
                      </div>
             <div className="temperature-units">
               <TemperatureUnits celsius={props.data.temp}/>

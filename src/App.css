@@ -1,4 +1,4 @@
-#container {
+.App #container {
   font-family: "Poppins", sans-serif;
   max-width: 600px;
   margin: 15px auto;

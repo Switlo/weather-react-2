@@ -1,4 +1,5 @@
 import React from "react";
+import IconsWeather from "./IconsWeather"
 
 import "./NextDays.css";
 
@@ -10,44 +11,56 @@ export default function NextDays() {
               <div className="col">
                 <p className="week-day">Mon</p>
                 <span className="nextdays">
-                  <i className="fa-solid fa-cloud-sun icon2-cloudy"></i>
+                  <IconsWeather code="01d" size={35}/>
                   <br />
-                  +16
+                  <span className="temperature-max">
+                  +16°...
+                  </span>
+                  <span className="temperature-min">
+                  +10°
+                  </span>                  
                 </span>
               </div>
               <div className="col">
-                <p className="week-day">Tuh</p>
+                <p className="week-day">Mon</p>
                 <span className="nextdays">
-                  <i className="fa-solid fa-cloud-sun icon2-cloudy"></i>
+                  <IconsWeather code="01d" size={35}/>
                   <br />
-                  +18
+                  <span className="temperature-max">
+                  +16°...
+                  </span>
+                  <span className="temperature-min">
+                  +10°
+                  </span>                  
                 </span>
               </div>
               <div className="col">
-                <p className="week-day">Wen</p>
+                <p className="week-day">Mon</p>
                 <span className="nextdays">
-                  <i className="fa-solid fa-cloud-sun icon2-cloudy"></i>
+                  <IconsWeather code="01d" size={35}/>
                   <br />
-                  +20
+                  <span className="temperature-max">
+                  +16°...
+                  </span>
+                  <span className="temperature-min">
+                  +10°
+                  </span>                  
                 </span>
               </div>
               <div className="col">
-                <p className="week-day">Thu</p>
+                <p className="week-day">Mon</p>
                 <span className="nextdays">
-                  <i className="fa-solid fa-cloud-sun icon2-cloudy"></i>
+                  <IconsWeather code="01d" size={35}/>
                   <br />
-                  +18
+                  <span className="temperature-max">
+                  +16°...
+                  </span>
+                  <span className="temperature-min">
+                  +10°
+                  </span>                  
                 </span>
               </div>
-              {/* <div className="col">
-                <p className="week-day">Fr</p>
-                <span className="nextdays">
-                  <i className="fa-solid fa-cloud-sun icon2-cloudy"></i>
-                  <br />
-                  +19
-                </span>
-              </div> */}
-            </div>
+                          </div>
           </div>
         </div>
       
