@@ -17,10 +17,11 @@ export default function NextDays(props) {
     return (
       <div className="card" id="weather-nextdays">
        <div className="row"> 
+       {/* eslint-disable-next-line */}
             {forecast.map(function (dailyWeather, index) {
             if (index < 4) {
               return (
-                <div className="col" key={index}>
+                <div className="col-3" key={index}>
                     <WeatherNextDays data={dailyWeather} />
                 </div>
               ); }

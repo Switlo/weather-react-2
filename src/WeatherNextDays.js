@@ -28,7 +28,7 @@ export default function WeatherNextDays(props) {
       }
       
     return (
-        <div className="card-body">
+        <div>
             <p className="week-day">{weekDays()}</p>
               <span className="nextdays">
                 <IconsWeather code={props.data.weather[0].icon} size={35}/>
