@@ -15,7 +15,7 @@ export default function Footer() {
         </a>&nbsp;
         
         | Open-sourced code is on&nbsp;
-        <a href="https://github.com/Switlo/weather-react" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/Switlo/weather-react-2" target="_blank" rel="noopener noreferrer">
           GitHub
         </a>
         &nbsp;and hosted on <a href="https://glittery-tiramisu-286e0f.netlify.app/" target="_blank" rel="noopener noreferrer">Netlify</a>
