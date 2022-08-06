@@ -16,6 +16,7 @@ export default function App() {
 function handleResponse(response) {
       setWeatherData({
       ready: true,
+      coord:response.data.coord,
       city: response.data.name,
       country: response.data.sys.country,
       temp: Math.round(response.data.main.temp),
@@ -80,7 +81,7 @@ function handleSubmit(event) {
             </div>
           </div>
           <div>
-            <NextDays />
+            <NextDays coord={weatherData.coord}/>
           </div>
       </div>
       <div>

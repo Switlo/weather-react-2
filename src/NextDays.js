@@ -1,69 +1,41 @@
-import React from "react";
-import IconsWeather from "./IconsWeather"
+import React, { useState } from "react";
+import axios from "axios";
+import WeatherNextDays from "./WeatherNextDays"
 
 import "./NextDays.css";
 
-export default function NextDays() {
-  return (
-        <div className="card" id="weather-nextdays">
-          <div className="card-body">
-            <div className="row">
-              <div className="col">
-                <p className="week-day">Mon</p>
-                <span className="nextdays">
-                  <IconsWeather code="01d" size={35}/>
-                  <br />
-                  <span className="temperature-max">
-                  +16°...
-                  </span>
-                  <span className="temperature-min">
-                  +10°
-                  </span>                  
-                </span>
-              </div>
-              <div className="col">
-                <p className="week-day">Mon</p>
-                <span className="nextdays">
-                  <IconsWeather code="01d" size={35}/>
-                  <br />
-                  <span className="temperature-max">
-                  +16°...
-                  </span>
-                  <span className="temperature-min">
-                  +10°
-                  </span>                  
-                </span>
-              </div>
-              <div className="col">
-                <p className="week-day">Mon</p>
-                <span className="nextdays">
-                  <IconsWeather code="01d" size={35}/>
-                  <br />
-                  <span className="temperature-max">
-                  +16°...
-                  </span>
-                  <span className="temperature-min">
-                  +10°
-                  </span>                  
-                </span>
-              </div>
-              <div className="col">
-                <p className="week-day">Mon</p>
-                <span className="nextdays">
-                  <IconsWeather code="01d" size={35}/>
-                  <br />
-                  <span className="temperature-max">
-                  +16°...
-                  </span>
-                  <span className="temperature-min">
-                  +10°
-                  </span>                  
-                </span>
-              </div>
-                          </div>
-          </div>
+export default function NextDays(props) {
+    let [loaded, setLoaded] = useState(false);
+    let [forecast, setForecast] = useState(null);
+  
+    function handleResponse(response) {
+      setForecast(response.data.daily);
+      setLoaded(true);
+    }
+  
+    if (loaded) {
+    return (
+      <div className="card" id="weather-nextdays">
+       <div className="row"> 
+            {forecast.map(function (daylyWeather, index) {
+            if (index < 4) {
+              return (
+                <div className="col" key={index}>
+                    <WeatherNextDays data={daylyWeather} />
+                </div>
+              ); }
+             })
+            }
         </div>
+      </div>);  
       
-    
-  );
+  } else {
+    let apiKey = "0bbb2981f03e6b3d1d7194b9db724d7c";
+    let lat = props.coord.lat;
+    let lon = props.coord.lon;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude={part}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+  
+    return null; 
+}
 }
