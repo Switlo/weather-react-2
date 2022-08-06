@@ -10,7 +10,7 @@ import Footer from "./Footer";
 import "./App.css";
 
 export default function App() {
-  const [weatherData, setWeatherData] = useState("");
+  const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState("Kyiv");
 
   
@@ -18,6 +18,7 @@ export default function App() {
 function handleResponse(response) {
   console.log(response.data);
       setWeatherData({
+      ready: true,
       city: response.data.name,
       country: response.data.sys.country,
       temp: Math.round(response.data.main.temp),
@@ -33,17 +34,17 @@ function handleResponse(response) {
 
 function handleSubmit(event) {
     event.preventDefault();
-    search(city);    
+    search();    
   }  
  
 
   function updateCity(event) {
-    setCity(event.target.value);    
+    setCity(event.target.value);   
   
   }
     
 
-  function search(city){
+  function search(){
       const apiKey = "edb5073dfa06a01ce33233d517b9358c";
       let unit = "metric";
       let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
@@ -51,7 +52,7 @@ function handleSubmit(event) {
       axios.get(apiUrl).then(handleResponse);
     } 
     
-      
+    if (weatherData.ready) {
    return (
     <div className="App">
       <div className="container" id="container">
@@ -96,6 +97,10 @@ function handleSubmit(event) {
       </div>
     </div>
     
-  );
+  );  
+} else {
+    search();
+    return null;
+  }
      
 }
