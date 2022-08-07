@@ -12,6 +12,7 @@ export default function CentralAphorism() {
     `There's no such thing as bad weather, just soft people.`,
     `If you want to see the sunshine, you have to weather the storm.`,
   ];
+  
   let quoter = getAphorism(quotes);
   function getAphorism(values) {
     const max = values.length - 1;

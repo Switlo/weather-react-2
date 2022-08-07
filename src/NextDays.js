@@ -1,12 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-import WeatherNextDays from "./WeatherNextDays"
+import NextDaysWeather from "./NextDaysWeather"
 
 import "./NextDays.css";
 
 export default function NextDays(props) {
     let [loaded, setLoaded] = useState(false);
     let [forecast, setForecast] = useState(null);
+
+    useEffect(() => {
+      setLoaded(false);
+    }, [props.coord]);
   
     function handleResponse(response) {
       setForecast(response.data.daily);
@@ -18,25 +22,26 @@ export default function NextDays(props) {
       <div className="card" id="weather-nextdays">
        <div className="row"> 
        {/* eslint-disable-next-line */}
-            {forecast.map(function (dailyWeather, index) {
+            {forecast.map(function (day, index) {
             if (index < 4) {
               return (
                 <div className="col" key={index}>
-                    <WeatherNextDays data={dailyWeather} />
+                    <NextDaysWeather data={day} />
                 </div>
-              ); }
-             })
+              ); 
+            } else {
+              return null;
             }
+             })}
         </div>
-      </div>);  
-      
+      </div>
+      );        
   } else {
-    let apiKey = "0bbb2981f03e6b3d1d7194b9db724d7c";
-    let lat = props.coord.lat;
-    let lon = props.coord.lon;
-    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude={part}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
-  
+    let apiKey = "961c81b1f2ef4eeae1c215b2ba88c0df";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${props.coord.lat}&lon=${props.coord.lon}&appid=${apiKey}&units=metric`;
+   
+    axios.get(apiUrl).then(handleResponse);  
+   
     return null; 
 }
 }

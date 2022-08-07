@@ -32,14 +32,12 @@ function handleSubmit(event) {
     search();
   }  
  
-
   function updateCity(event) {
     setCity(event.target.value);     
   }
     
-
   function search(){
-      const apiKey = "edb5073dfa06a01ce33233d517b9358c";
+      const apiKey = "961c81b1f2ef4eeae1c215b2ba88c0df";
       let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
       axios.get(apiUrl).then(handleResponse);
     } 
@@ -56,10 +54,9 @@ function handleSubmit(event) {
                 </div>
                   <div className="col">
                     <div className="HeaderForm">
-                      <form onSubmit={handleSubmit} id="formaCity">
+                      <form onSubmit={handleSubmit}>
                       <input
                         className="form-control form-control-sm"
-                        id="city-input"
                         type="search"
                         placeholder="Type a city and press Enter"
                         autoFocus="on"
@@ -93,5 +90,4 @@ function handleSubmit(event) {
     search();
     return null;
   }
-     
 }
