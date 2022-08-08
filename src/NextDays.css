@@ -8,7 +8,7 @@
   width: 100px;
   text-align: center;
 }
-.nextdays{
+.nextdays {
     display: block;
     margin: 0 auto;
     width: 100px;
@@ -24,9 +24,6 @@
     
   }
   
-  .nextdays i {
-    color: #074d8f;
-  }
   .week-day {
     font-size: 15px;
     font-weight: 600;
@@ -50,7 +47,10 @@
   }
   
   @media (max-width: 415px) {
-    #weather-nextdays .col {
-      width: 110px;
+  #weather-nextdays .col {
+      width: 160px;
+        }
+  .NextDaysWeather {
+    padding: 0 15px;
   }
 }

@@ -14,7 +14,7 @@
   min-width: 200px;
 }
 
-@media (max-width: 395px) {
+@media (max-width: 360px) {
   .HeaderForm {
     width: 250px;
     text-align: center;
@@ -22,8 +22,16 @@
   .App #container {
     padding: 5px;
     padding-bottom: 15px;
-  }
+    margin: 5px auto;
+    }
   .App .card-body {
     padding: 10px;
   }
+}
+
+@media (min-width: 360px) {
+   .App #container {
+    padding: 10px;
+    padding-bottom: 20px;   
+     }
 }

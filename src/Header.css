@@ -94,7 +94,7 @@
 
 @media (max-width: 415px) {
   .temperature {
-    font-size: 35px;
+    font-size: 33px;
   }
   .searchCity, .aphorism {
       font-size: 23px;
@@ -112,6 +112,9 @@
   }
   #weekDay, #currentTime {
   font-size: 16px;
+}
+#icon {
+  width: 30px;
 }
 
 }
