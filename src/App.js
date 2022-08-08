@@ -74,7 +74,7 @@ function handleSubmit(event) {
               <CentralCity data={weatherData} /> 
             </div>
              <div className="col">
-              <CentralAphorism />
+              <CentralAphorism city={weatherData.city} />
             </div>
           </div>
           <div>
