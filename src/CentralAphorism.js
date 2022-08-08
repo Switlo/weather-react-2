@@ -18,8 +18,7 @@ useEffect(() => {
   setQuote(getAphorism(quotes));
 }, [props.city]);
   
-  // let quoter = getAphorism(quotes);
-  function getAphorism(values) {
+   function getAphorism(values) {
     const max = values.length - 1;
     const min = 0;
     const index = Math.round(Math.random() * (max - min) + min);

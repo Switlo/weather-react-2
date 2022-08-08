@@ -3,6 +3,7 @@
   max-width: 600px;
   margin: 15px auto;
   padding: 10px;
+  padding-bottom: 20px;
   border-width: 1;
   background: linear-gradient(#e1f2fb, #f7f7f7);
   border-radius: 10px;
@@ -13,3 +14,16 @@
   min-width: 200px;
 }
 
+@media (max-width: 395px) {
+  .HeaderForm {
+    width: 250px;
+    text-align: center;
+  }
+  .App #container {
+    padding: 5px;
+    padding-bottom: 15px;
+  }
+  .App .card-body {
+    padding: 10px;
+  }
+}

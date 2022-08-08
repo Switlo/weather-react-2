@@ -20,7 +20,7 @@ export default function NextDays(props) {
     if (loaded) {
     return (
       <div className="card" id="weather-nextdays">
-       <div className="row"> 
+       <div className="row justify-content-center"> 
        {/* eslint-disable-next-line */}
             {forecast.map(function (day, index) {
             if (index < 4) {
