@@ -14,6 +14,12 @@
   min-width: 200px;
 }
 
+.bg-summer {
+  background: linear-gradient(#ffe700, #f7f7f7)
+}
+
+
+
 @media (max-width: 360px) {
   .HeaderForm {
     width: 250px;

@@ -30,7 +30,7 @@ let months = [
   "Desember",
 ];
 let weekDay = days[now.getDay()];
-let currentMonth = now.getMonth();
+let currentMonth = [now.getMonth()];
 let month = months[currentMonth];
 let date = now.getDate();
 let year = now.getFullYear();
@@ -45,7 +45,8 @@ if (minute < 10) {
   minute = `0${minute}`;
 }
 
-// let seasonBackground = document.querySelector(".App #container");
+
+// const seasonBackground = document.querySelector(".App #container");
 // changeBackground();
 
 // function changeBackground() {

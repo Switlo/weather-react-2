@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 import HeaderDate from "./HeaderDate";
@@ -12,6 +12,25 @@ import "./App.css";
 export default function App() {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState("Kyiv");
+  const [background, setBackground] = useState("bg-summer");
+
+  useEffect(() => {
+    const currentMonth = new Date().getMonth();
+    console.log(currentMonth);
+
+    if (currentMonth === 11 || currentMonth === 0 || currentMonth === 1) {
+    setBackground(`linear-gradient(#64c4ed, #f7f7f7)`);
+          }
+      if (currentMonth === 2 || currentMonth === 3 || currentMonth === 4) {
+        setBackground(`linear-gradient(#4ef037, #f7f7f7)`);    
+      }
+      if (currentMonth === 5 || currentMonth === 6 || currentMonth === 7) {
+        setBackground("bg-summer");
+      }
+      if (currentMonth === 8 || currentMonth === 9 || currentMonth === 10) {
+        setBackground(`linear-gradient(#ffc93c, #f7f7f7)`);}
+
+}, []);
 
 function handleResponse(response) {
       setWeatherData({
@@ -45,7 +64,7 @@ function handleSubmit(event) {
     if (weatherData.ready) {
    return (
     <div className="App">
-      <div className="container" id="container">
+      <div className={`container ${background}`} id="container">
         <div className="card" id="card">
           <div className="card-body">
              <div className="row">
