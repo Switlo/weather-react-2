@@ -16,19 +16,18 @@ export default function App() {
 
   useEffect(() => {
     const currentMonth = new Date().getMonth();
-    console.log(currentMonth);
-
+    
     if (currentMonth === 11 || currentMonth === 0 || currentMonth === 1) {
-    setBackground(`linear-gradient(#64c4ed, #f7f7f7)`);
+    setBackground("bg-winter");
           }
       if (currentMonth === 2 || currentMonth === 3 || currentMonth === 4) {
-        setBackground(`linear-gradient(#4ef037, #f7f7f7)`);    
+        setBackground("bg-spring");    
       }
       if (currentMonth === 5 || currentMonth === 6 || currentMonth === 7) {
         setBackground("bg-summer");
       }
       if (currentMonth === 8 || currentMonth === 9 || currentMonth === 10) {
-        setBackground(`linear-gradient(#ffc93c, #f7f7f7)`);}
+        setBackground("bg-autumn");}
 
 }, []);
 

@@ -5,7 +5,7 @@
   padding: 10px;
   padding-bottom: 20px;
   border-width: 1;
-  background: linear-gradient(#e1f2fb, #f7f7f7);
+  /* background: linear-gradient(#e1f2fb, #f7f7f7); */
   border-radius: 10px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
@@ -14,10 +14,19 @@
   min-width: 200px;
 }
 
+.bg-winter {
+  background: linear-gradient(#e1f2fb, #f7f7f7);;
+}
+.bg-spring {
+  background: linear-gradient(#4ef037, #f7f7f7);
+}
 .bg-summer {
   background: linear-gradient(#ffe700, #f7f7f7)
 }
 
+.bg-autumn {
+  background: linear-gradient(#ffc93c, #f7f7f7);
+}
 
 
 @media (max-width: 360px) {
