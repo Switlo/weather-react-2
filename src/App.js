@@ -12,7 +12,7 @@ import "./App.css";
 export default function App() {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState("Kyiv");
-  const [background, setBackground] = useState("bg-summer");
+  const [background, setBackground] = useState("");
 
   useEffect(() => {
     const currentMonth = new Date().getMonth();
